@@ -1,0 +1,938 @@
+{
+  "integration": {
+    "passed": 3,
+    "failed": 7,
+    "tests": [
+      {
+        "name": "E-commerce Application - Integration Tests Product to Cart Flow should add product to cart and update cart display",
+        "status": "failed",
+        "duration": 26,
+        "error": "{\n  \"messages\": [\n    \"TestingLibraryElementError: Unable to find an element with the text: (1). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\\n\\nIgnored nodes: comments, script, style\\n\\u001b[36m<body>\\u001b[39m\\n  \\u001b[36m<div>\\u001b[39m\\n    \\u001b[36m<div>\\u001b[39m\\n      \\u001b[36m<article\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-8xl cursor-default\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0m🍕\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-lg\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mTest Pizza\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-2xl font-semibold mt-auto\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mJPY 1200\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex justify-around items-center mt-4 mb-2 \\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m-\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n          \\u001b[36m<span\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"w-10 text-center rounded-md mx-3\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m1\\u001b[0m\\n          \\u001b[36m</span>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m+\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mAdd to cart\\u001b[0m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</article>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"p-5\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mYou have no items in your cart\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m</div>\\u001b[39m\\n    \\u001b[36m</div>\\u001b[39m\\n  \\u001b[36m</div>\\u001b[39m\\n\\u001b[36m</body>\\u001b[39m\\n    at Object.getElementError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\\n    at Object.getByText (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:69:21)\"\n  ],\n  \"details\": [\n    {\n      \"name\": \"TestingLibraryElementError\"\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 26,\n  \"fullName\": \"E-commerce Application - Integration Tests Product to Cart Flow should add product to cart and update cart display\",\n  \"title\": \"should add product to cart and update cart display\",\n  \"ancestorTitles\": [\n    \"E-commerce Application - Integration Tests\",\n    \"Product to Cart Flow\"\n  ]\n}",
+        "title": "should add product to cart and update cart display",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Product to Cart Flow"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Product to Cart Flow should add multiple quantities to cart",
+        "status": "failed",
+        "duration": 8,
+        "error": "{\n  \"messages\": [\n    \"TestingLibraryElementError: Unable to find an element with the text: (3). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\\n\\nIgnored nodes: comments, script, style\\n\\u001b[36m<body>\\u001b[39m\\n  \\u001b[36m<div>\\u001b[39m\\n    \\u001b[36m<div>\\u001b[39m\\n      \\u001b[36m<article\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-8xl cursor-default\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0m🍕\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-lg\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mTest Pizza\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-2xl font-semibold mt-auto\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mJPY 1200\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex justify-around items-center mt-4 mb-2 \\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m-\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n          \\u001b[36m<span\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"w-10 text-center rounded-md mx-3\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m1\\u001b[0m\\n          \\u001b[36m</span>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m+\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mAdd to cart\\u001b[0m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</article>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"p-5\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mYou have no items in your cart\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m</div>\\u001b[39m\\n    \\u001b[36m</div>\\u001b[39m\\n  \\u001b[36m</div>\\u001b[39m\\n\\u001b[36m</body>\\u001b[39m\\n    at Object.getElementError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\\n    at Object.getByText (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:116:21)\"\n  ],\n  \"details\": [\n    {\n      \"name\": \"TestingLibraryElementError\"\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 8,\n  \"fullName\": \"E-commerce Application - Integration Tests Product to Cart Flow should add multiple quantities to cart\",\n  \"title\": \"should add multiple quantities to cart\",\n  \"ancestorTitles\": [\n    \"E-commerce Application - Integration Tests\",\n    \"Product to Cart Flow\"\n  ]\n}",
+        "title": "should add multiple quantities to cart",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Product to Cart Flow"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Cart Management Integration should remove item from cart and update display",
+        "status": "failed",
+        "duration": 7,
+        "error": "{\n  \"messages\": [\n    \"TestingLibraryElementError: Unable to find an element with the text: You have no items in your cart. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\\n\\nIgnored nodes: comments, script, style\\n\\u001b[36m<body>\\u001b[39m\\n  \\u001b[36m<div>\\u001b[39m\\n    \\u001b[36m<div\\u001b[39m\\n      \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\\\"\\u001b[39m\\n    \\u001b[36m>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex items-center gap-4 mb-3\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<p\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-4xl\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0m🍕\\u001b[0m\\n        \\u001b[36m</p>\\u001b[39m\\n        \\u001b[36m<div>\\u001b[39m\\n          \\u001b[0mTest Pizza\\u001b[0m\\n          \\u001b[0m \\u001b[0m\\n          \\u001b[36m<span\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-xs\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m(\\u001b[0m\\n            \\u001b[0m1\\u001b[0m\\n            \\u001b[0m)\\u001b[0m\\n          \\u001b[36m</span>\\u001b[39m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"ml-auto\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0m￥\\u001b[0m\\n          \\u001b[0m1200\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:bg-emerald-50 transition-colors rounded-full duration-500 p-1\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[36m<img\\u001b[39m\\n            \\u001b[33malt\\u001b[39m=\\u001b[32m\\\"delete icon\\\"\\u001b[39m\\n            \\u001b[33mheight\\u001b[39m=\\u001b[32m\\\"20\\\"\\u001b[39m\\n            \\u001b[33msrc\\u001b[39m=\\u001b[32m\\\"./trash.svg\\\"\\u001b[39m\\n            \\u001b[33mwidth\\u001b[39m=\\u001b[32m\\\"20\\\"\\u001b[39m\\n          \\u001b[36m/>\\u001b[39m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m<hr\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"my-4 border-gray-300\\\"\\u001b[39m\\n      \\u001b[36m/>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-right font-bold text-xl md:text-2xl\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[0mTotal: ￥\\u001b[0m\\n        \\u001b[0m1200\\u001b[0m\\n        \\u001b[0m(\\u001b[0m\\n        \\u001b[0m1\\u001b[0m\\n        \\u001b[0m)\\u001b[0m\\n      \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m<article\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"mt-3 flex flex-col\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-red-700 text-xs mb-3 h-5 text-center\\\"\\u001b[39m\\n        \\u001b[36m/>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mProceed to checkout\\u001b[0m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</article>\\u001b[39m\\n    \\u001b[36m</div>\\u001b[39m\\n  \\u001b[36m</div>\\u001b[39m\\n\\u001b[36m</body>\\u001b[39m\\n    at Object.getElementError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\\n    at Object.getByText (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:155:21)\"\n  ],\n  \"details\": [\n    {\n      \"name\": \"TestingLibraryElementError\"\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 7,\n  \"fullName\": \"E-commerce Application - Integration Tests Cart Management Integration should remove item from cart and update display\",\n  \"title\": \"should remove item from cart and update display\",\n  \"ancestorTitles\": [\n    \"E-commerce Application - Integration Tests\",\n    \"Cart Management Integration\"\n  ]\n}",
+        "title": "should remove item from cart and update display",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Cart Management Integration"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Cart Management Integration should handle multiple items in cart",
+        "status": "passed",
+        "duration": 3,
+        "error": null,
+        "title": "should handle multiple items in cart",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Cart Management Integration"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Checkout Process Integration should enable checkout button when cart has valid items",
+        "status": "passed",
+        "duration": 2,
+        "error": null,
+        "title": "should enable checkout button when cart has valid items",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Checkout Process Integration"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Checkout Process Integration should disable checkout button when cart is empty",
+        "status": "failed",
+        "duration": 2,
+        "error": "{\n  \"messages\": [\n    \"Error: expect(element).toBeDisabled()\\n\\nReceived element is not disabled:\\n  <button class=\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\" />\\n    at Object.toBeDisabled (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:216:30)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {\n      \"matcherResult\": {\n        \"pass\": false,\n        \"message\": \"expect(element).toBeDisabled()\\n\\nReceived element is not disabled:\\n  <button class=\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\" />\"\n      }\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 2,\n  \"fullName\": \"E-commerce Application - Integration Tests Checkout Process Integration should disable checkout button when cart is empty\",\n  \"title\": \"should disable checkout button when cart is empty\",\n  \"ancestorTitles\": [\n    \"E-commerce Application - Integration Tests\",\n    \"Checkout Process Integration\"\n  ]\n}",
+        "title": "should disable checkout button when cart is empty",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Checkout Process Integration"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Checkout Process Integration should handle successful checkout redirect",
+        "status": "failed",
+        "duration": 1005,
+        "error": "{\n  \"messages\": [\n    \"Error: Unable to find an element with the text: Proceed to checkout. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\\n\\nIgnored nodes: comments, script, style\\n\\u001b[36m<body>\\u001b[39m\\n  \\u001b[36m<div>\\u001b[39m\\n    \\u001b[36m<article\\u001b[39m\\n      \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"mt-3 flex flex-col\\\"\\u001b[39m\\n    \\u001b[36m>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-red-700 text-xs mb-3 h-5 text-center\\\"\\u001b[39m\\n      \\u001b[36m/>\\u001b[39m\\n      \\u001b[36m<button\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[0mLoading...\\u001b[0m\\n      \\u001b[36m</button>\\u001b[39m\\n    \\u001b[36m</article>\\u001b[39m\\n  \\u001b[36m</div>\\u001b[39m\\n\\u001b[36m</body>\\u001b[39m\\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:236:20)\"\n  ],\n  \"details\": [\n    {\n      \"name\": \"TestingLibraryElementError\"\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1005,\n  \"fullName\": \"E-commerce Application - Integration Tests Checkout Process Integration should handle successful checkout redirect\",\n  \"title\": \"should handle successful checkout redirect\",\n  \"ancestorTitles\": [\n    \"E-commerce Application - Integration Tests\",\n    \"Checkout Process Integration\"\n  ]\n}",
+        "title": "should handle successful checkout redirect",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Checkout Process Integration"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Checkout Process Integration should handle checkout redirect error",
+        "status": "passed",
+        "duration": 8,
+        "error": null,
+        "title": "should handle checkout redirect error",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Checkout Process Integration"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Full Shopping Flow should complete full shopping flow: add items, manage cart, checkout",
+        "status": "failed",
+        "duration": 1009,
+        "error": "{\n  \"messages\": [\n    \"Error: Unable to find an element with the text: (2). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\\n\\nIgnored nodes: comments, script, style\\n\\u001b[36m<body>\\u001b[39m\\n  \\u001b[36m<div>\\u001b[39m\\n    \\u001b[36m<div>\\u001b[39m\\n      \\u001b[36m<article\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-8xl cursor-default\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0m🍕\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-lg\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mTest Pizza\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-2xl font-semibold mt-auto\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mJPY 1200\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex justify-around items-center mt-4 mb-2 \\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m-\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n          \\u001b[36m<span\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"w-10 text-center rounded-md mx-3\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m1\\u001b[0m\\n          \\u001b[36m</span>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m+\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mAdd to cart\\u001b[0m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</article>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"p-5\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mYou have no items in your cart\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m<article\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"mt-3 flex flex-col\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-red-700 text-xs mb-3 h-5 text-center\\\"\\u001b[39m\\n        \\u001b[36m/>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mProceed to checkout\\u001b[0m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</article>\\u001b[39m\\n    \\u001b[36m</div>\\u001b[39m\\n  \\u001b[36m</div>\\u001b[39m\\n\\u001b[36m</body>\\u001b[39m\\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:297:20)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {\n      \"name\": \"TestingLibraryElementError\"\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1009,\n  \"fullName\": \"E-commerce Application - Integration Tests Full Shopping Flow should complete full shopping flow: add items, manage cart, checkout\",\n  \"title\": \"should complete full shopping flow: add items, manage cart, checkout\",\n  \"ancestorTitles\": [\n    \"E-commerce Application - Integration Tests\",\n    \"Full Shopping Flow\"\n  ]\n}",
+        "title": "should complete full shopping flow: add items, manage cart, checkout",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Full Shopping Flow"
+        ]
+      },
+      {
+        "name": "E-commerce Application - Integration Tests Cart State Synchronization should synchronize cart state across components",
+        "status": "failed",
+        "duration": 1007,
+        "error": "{\n  \"messages\": [\n    \"Error: Unable to find an element with the text: Total: ￥1200(1). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\\n\\nIgnored nodes: comments, script, style\\n\\u001b[36m<body>\\u001b[39m\\n  \\u001b[36m<div>\\u001b[39m\\n    \\u001b[36m<div>\\u001b[39m\\n      \\u001b[36m<article\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-8xl cursor-default\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0m🍕\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-lg\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mTest Pizza\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-2xl font-semibold mt-auto\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mJPY 1200\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"flex justify-around items-center mt-4 mb-2 \\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m-\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n          \\u001b[36m<span\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"w-10 text-center rounded-md mx-3\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m1\\u001b[0m\\n          \\u001b[36m</span>\\u001b[39m\\n          \\u001b[36m<button\\u001b[39m\\n            \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\\\"\\u001b[39m\\n          \\u001b[36m>\\u001b[39m\\n            \\u001b[0m+\\u001b[0m\\n          \\u001b[36m</button>\\u001b[39m\\n        \\u001b[36m</div>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mAdd to cart\\u001b[0m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</article>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"p-5\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mYou have no items in your cart\\u001b[0m\\n        \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m</div>\\u001b[39m\\n      \\u001b[36m<article\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"mt-3 flex flex-col\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[36m<div\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-red-700 text-xs mb-3 h-5 text-center\\\"\\u001b[39m\\n        \\u001b[36m/>\\u001b[39m\\n        \\u001b[36m<button\\u001b[39m\\n          \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\"\\u001b[39m\\n        \\u001b[36m>\\u001b[39m\\n          \\u001b[0mProceed to checkout\\u001b[0m\\n        \\u001b[36m</button>\\u001b[39m\\n      \\u001b[36m</article>\\u001b[39m\\n    \\u001b[36m</div>\\u001b[39m\\n  \\u001b[36m</div>\\u001b[39m\\n\\u001b[36m</body>\\u001b[39m\\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:346:20)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {\n      \"name\": \"TestingLibraryElementError\"\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1007,\n  \"fullName\": \"E-commerce Application - Integration Tests Cart State Synchronization should synchronize cart state across components\",\n  \"title\": \"should synchronize cart state across components\",\n  \"ancestorTitles\": [\n    \"E-commerce Application - Integration Tests\",\n    \"Cart State Synchronization\"\n  ]\n}",
+        "title": "should synchronize cart state across components",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Cart State Synchronization"
+        ]
+      }
+    ],
+    "errors": [
+      {
+        "messages": [
+          "TestingLibraryElementError: Unable to find an element with the text: (1). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<div>\u001b[39m\n      \u001b[36m<article\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-8xl cursor-default\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0m🍕\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-lg\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mTest Pizza\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-2xl font-semibold mt-auto\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mJPY 1200\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"flex justify-around items-center mt-4 mb-2 \"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m-\u001b[0m\n          \u001b[36m</button>\u001b[39m\n          \u001b[36m<span\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"w-10 text-center rounded-md mx-3\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m1\u001b[0m\n          \u001b[36m</span>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m+\u001b[0m\n          \u001b[36m</button>\u001b[39m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mAdd to cart\u001b[0m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</article>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"p-5\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mYou have no items in your cart\u001b[0m\n        \u001b[36m</div>\u001b[39m\n      \u001b[36m</div>\u001b[39m\n    \u001b[36m</div>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at Object.getElementError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\n    at Object.getByText (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:69:21)"
+        ],
+        "details": [
+          {
+            "name": "TestingLibraryElementError"
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 26,
+        "fullName": "E-commerce Application - Integration Tests Product to Cart Flow should add product to cart and update cart display",
+        "title": "should add product to cart and update cart display",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Product to Cart Flow"
+        ]
+      },
+      {
+        "messages": [
+          "TestingLibraryElementError: Unable to find an element with the text: (3). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<div>\u001b[39m\n      \u001b[36m<article\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-8xl cursor-default\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0m🍕\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-lg\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mTest Pizza\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-2xl font-semibold mt-auto\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mJPY 1200\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"flex justify-around items-center mt-4 mb-2 \"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m-\u001b[0m\n          \u001b[36m</button>\u001b[39m\n          \u001b[36m<span\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"w-10 text-center rounded-md mx-3\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m1\u001b[0m\n          \u001b[36m</span>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m+\u001b[0m\n          \u001b[36m</button>\u001b[39m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mAdd to cart\u001b[0m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</article>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"p-5\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mYou have no items in your cart\u001b[0m\n        \u001b[36m</div>\u001b[39m\n      \u001b[36m</div>\u001b[39m\n    \u001b[36m</div>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at Object.getElementError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\n    at Object.getByText (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:116:21)"
+        ],
+        "details": [
+          {
+            "name": "TestingLibraryElementError"
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 8,
+        "fullName": "E-commerce Application - Integration Tests Product to Cart Flow should add multiple quantities to cart",
+        "title": "should add multiple quantities to cart",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Product to Cart Flow"
+        ]
+      },
+      {
+        "messages": [
+          "TestingLibraryElementError: Unable to find an element with the text: You have no items in your cart. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<div\u001b[39m\n      \u001b[33mclass\u001b[39m=\u001b[32m\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\"\u001b[39m\n    \u001b[36m>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"flex items-center gap-4 mb-3\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<p\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-4xl\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0m🍕\u001b[0m\n        \u001b[36m</p>\u001b[39m\n        \u001b[36m<div>\u001b[39m\n          \u001b[0mTest Pizza\u001b[0m\n          \u001b[0m \u001b[0m\n          \u001b[36m<span\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"text-xs\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m(\u001b[0m\n            \u001b[0m1\u001b[0m\n            \u001b[0m)\u001b[0m\n          \u001b[36m</span>\u001b[39m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"ml-auto\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0m￥\u001b[0m\n          \u001b[0m1200\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"hover:bg-emerald-50 transition-colors rounded-full duration-500 p-1\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<img\u001b[39m\n            \u001b[33malt\u001b[39m=\u001b[32m\"delete icon\"\u001b[39m\n            \u001b[33mheight\u001b[39m=\u001b[32m\"20\"\u001b[39m\n            \u001b[33msrc\u001b[39m=\u001b[32m\"./trash.svg\"\u001b[39m\n            \u001b[33mwidth\u001b[39m=\u001b[32m\"20\"\u001b[39m\n          \u001b[36m/>\u001b[39m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</div>\u001b[39m\n      \u001b[36m<hr\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"my-4 border-gray-300\"\u001b[39m\n      \u001b[36m/>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"text-right font-bold text-xl md:text-2xl\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[0mTotal: ￥\u001b[0m\n        \u001b[0m1200\u001b[0m\n        \u001b[0m(\u001b[0m\n        \u001b[0m1\u001b[0m\n        \u001b[0m)\u001b[0m\n      \u001b[36m</div>\u001b[39m\n      \u001b[36m<article\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"mt-3 flex flex-col\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-red-700 text-xs mb-3 h-5 text-center\"\u001b[39m\n        \u001b[36m/>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mProceed to checkout\u001b[0m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</article>\u001b[39m\n    \u001b[36m</div>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at Object.getElementError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19\n    at Object.getByText (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:155:21)"
+        ],
+        "details": [
+          {
+            "name": "TestingLibraryElementError"
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 7,
+        "fullName": "E-commerce Application - Integration Tests Cart Management Integration should remove item from cart and update display",
+        "title": "should remove item from cart and update display",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Cart Management Integration"
+        ]
+      },
+      {
+        "messages": [
+          "Error: expect(element).toBeDisabled()\n\nReceived element is not disabled:\n  <button class=\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\" />\n    at Object.toBeDisabled (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:216:30)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {
+            "matcherResult": {
+              "pass": false,
+              "message": "expect(element).toBeDisabled()\n\nReceived element is not disabled:\n  <button class=\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\" />"
+            }
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 2,
+        "fullName": "E-commerce Application - Integration Tests Checkout Process Integration should disable checkout button when cart is empty",
+        "title": "should disable checkout button when cart is empty",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Checkout Process Integration"
+        ]
+      },
+      {
+        "messages": [
+          "Error: Unable to find an element with the text: Proceed to checkout. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<article\u001b[39m\n      \u001b[33mclass\u001b[39m=\u001b[32m\"mt-3 flex flex-col\"\u001b[39m\n    \u001b[36m>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"text-red-700 text-xs mb-3 h-5 text-center\"\u001b[39m\n      \u001b[36m/>\u001b[39m\n      \u001b[36m<button\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[0mLoading...\u001b[0m\n      \u001b[36m</button>\u001b[39m\n    \u001b[36m</article>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:236:20)"
+        ],
+        "details": [
+          {
+            "name": "TestingLibraryElementError"
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 1005,
+        "fullName": "E-commerce Application - Integration Tests Checkout Process Integration should handle successful checkout redirect",
+        "title": "should handle successful checkout redirect",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Checkout Process Integration"
+        ]
+      },
+      {
+        "messages": [
+          "Error: Unable to find an element with the text: (2). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<div>\u001b[39m\n      \u001b[36m<article\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-8xl cursor-default\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0m🍕\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-lg\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mTest Pizza\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-2xl font-semibold mt-auto\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mJPY 1200\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"flex justify-around items-center mt-4 mb-2 \"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m-\u001b[0m\n          \u001b[36m</button>\u001b[39m\n          \u001b[36m<span\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"w-10 text-center rounded-md mx-3\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m1\u001b[0m\n          \u001b[36m</span>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m+\u001b[0m\n          \u001b[36m</button>\u001b[39m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mAdd to cart\u001b[0m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</article>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"p-5\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mYou have no items in your cart\u001b[0m\n        \u001b[36m</div>\u001b[39m\n      \u001b[36m</div>\u001b[39m\n      \u001b[36m<article\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"mt-3 flex flex-col\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-red-700 text-xs mb-3 h-5 text-center\"\u001b[39m\n        \u001b[36m/>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mProceed to checkout\u001b[0m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</article>\u001b[39m\n    \u001b[36m</div>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:297:20)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {
+            "name": "TestingLibraryElementError"
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 1009,
+        "fullName": "E-commerce Application - Integration Tests Full Shopping Flow should complete full shopping flow: add items, manage cart, checkout",
+        "title": "should complete full shopping flow: add items, manage cart, checkout",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Full Shopping Flow"
+        ]
+      },
+      {
+        "messages": [
+          "Error: Unable to find an element with the text: Total: ￥1200(1). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<div>\u001b[39m\n      \u001b[36m<article\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"flex flex-col gap-3 bg-white p-8 rounded-xl shadow-md text-center mb-6\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-8xl cursor-default\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0m🍕\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-lg\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mTest Pizza\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-2xl font-semibold mt-auto\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mJPY 1200\u001b[0m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"flex justify-around items-center mt-4 mb-2 \"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m-\u001b[0m\n          \u001b[36m</button>\u001b[39m\n          \u001b[36m<span\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"w-10 text-center rounded-md mx-3\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m1\u001b[0m\n          \u001b[36m</span>\u001b[39m\n          \u001b[36m<button\u001b[39m\n            \u001b[33mclass\u001b[39m=\u001b[32m\"hover:text-emerald-500 hover:bg-emerald-50 w-8 h-8 rounded-full transition-colors duration-500\"\u001b[39m\n          \u001b[36m>\u001b[39m\n            \u001b[0m+\u001b[0m\n          \u001b[36m</button>\u001b[39m\n        \u001b[36m</div>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 rounded-md px-5 py-2\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mAdd to cart\u001b[0m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</article>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"bg-white flex flex-col absolute right-3 md:right-9 top-14 w-80 py-4 px-4 shadow-[0_5px_15px_0_rgba(0,0,0,.15)] rounded-md transition-opacity duration-500 opacity-100\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"p-5\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mYou have no items in your cart\u001b[0m\n        \u001b[36m</div>\u001b[39m\n      \u001b[36m</div>\u001b[39m\n      \u001b[36m<article\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"mt-3 flex flex-col\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[36m<div\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"text-red-700 text-xs mb-3 h-5 text-center\"\u001b[39m\n        \u001b[36m/>\u001b[39m\n        \u001b[36m<button\u001b[39m\n          \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\"\u001b[39m\n        \u001b[36m>\u001b[39m\n          \u001b[0mProceed to checkout\u001b[0m\n        \u001b[36m</button>\u001b[39m\n      \u001b[36m</article>\u001b[39m\n    \u001b[36m</div>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/integration/Ecommerce.test.js:346:20)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {
+            "name": "TestingLibraryElementError"
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 1007,
+        "fullName": "E-commerce Application - Integration Tests Cart State Synchronization should synchronize cart state across components",
+        "title": "should synchronize cart state across components",
+        "ancestorTitles": [
+          "E-commerce Application - Integration Tests",
+          "Cart State Synchronization"
+        ]
+      }
+    ]
+  },
+  "unit": {
+    "passed": 30,
+    "failed": 10,
+    "tests": [
+      {
+        "name": "CheckoutButton Component - Unit Tests Button State Management should render button with \"Proceed to checkout\" text initially",
+        "status": "passed",
+        "duration": 5,
+        "error": null,
+        "title": "should render button with \"Proceed to checkout\" text initially",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Button State Management"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Button State Management should change button text to \"Loading...\" when clicked",
+        "status": "passed",
+        "duration": 4,
+        "error": null,
+        "title": "should change button text to \"Loading...\" when clicked",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Button State Management"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Button State Management should return to \"Proceed to checkout\" text after loading completes",
+        "status": "failed",
+        "duration": 1010,
+        "error": "{\n  \"messages\": [\n    \"Error: Unable to find an element with the text: Proceed to checkout. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\\n\\nIgnored nodes: comments, script, style\\n\\u001b[36m<body>\\u001b[39m\\n  \\u001b[36m<div>\\u001b[39m\\n    \\u001b[36m<article\\u001b[39m\\n      \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"mt-3 flex flex-col\\\"\\u001b[39m\\n    \\u001b[36m>\\u001b[39m\\n      \\u001b[36m<div\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"text-red-700 text-xs mb-3 h-5 text-center\\\"\\u001b[39m\\n      \\u001b[36m/>\\u001b[39m\\n      \\u001b[36m<button\\u001b[39m\\n        \\u001b[33mclass\\u001b[39m=\\u001b[32m\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\"\\u001b[39m\\n      \\u001b[36m>\\u001b[39m\\n        \\u001b[0mLoading...\\u001b[0m\\n      \\u001b[36m</button>\\u001b[39m\\n    \\u001b[36m</article>\\u001b[39m\\n  \\u001b[36m</div>\\u001b[39m\\n\\u001b[36m</body>\\u001b[39m\\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/unit/CheckoutButton.test.js:51:20)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {\n      \"name\": \"TestingLibraryElementError\"\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1010,\n  \"fullName\": \"CheckoutButton Component - Unit Tests Button State Management should return to \\\"Proceed to checkout\\\" text after loading completes\",\n  \"title\": \"should return to \\\"Proceed to checkout\\\" text after loading completes\",\n  \"ancestorTitles\": [\n    \"CheckoutButton Component - Unit Tests\",\n    \"Button State Management\"\n  ]\n}",
+        "title": "should return to \"Proceed to checkout\" text after loading completes",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Button State Management"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Cart Validation should disable button when cart is empty",
+        "status": "failed",
+        "duration": 2,
+        "error": "{\n  \"messages\": [\n    \"Error: expect(element).toBeDisabled()\\n\\nReceived element is not disabled:\\n  <button class=\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\" />\\n    at Object.toBeDisabled (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/unit/CheckoutButton.test.js:65:22)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {\n      \"matcherResult\": {\n        \"pass\": false,\n        \"message\": \"expect(element).toBeDisabled()\\n\\nReceived element is not disabled:\\n  <button class=\\\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\\\" />\"\n      }\n    }\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 2,\n  \"fullName\": \"CheckoutButton Component - Unit Tests Cart Validation should disable button when cart is empty\",\n  \"title\": \"should disable button when cart is empty\",\n  \"ancestorTitles\": [\n    \"CheckoutButton Component - Unit Tests\",\n    \"Cart Validation\"\n  ]\n}",
+        "title": "should disable button when cart is empty",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Cart Validation"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Cart Validation should disable button when total price is below minimum",
+        "status": "passed",
+        "duration": 0,
+        "error": null,
+        "title": "should disable button when total price is below minimum",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Cart Validation"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Cart Validation should disable button when cart has too many items",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should disable button when cart has too many items",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Cart Validation"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Cart Validation should enable button when cart is valid",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should enable button when cart is valid",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Cart Validation"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Error Messages should show minimum price error message",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should show minimum price error message",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Error Messages"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Error Messages should show maximum items error message",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should show maximum items error message",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Error Messages"
+        ]
+      },
+      {
+        "name": "CheckoutButton Component - Unit Tests Error Messages should show redirect error message when checkout fails",
+        "status": "passed",
+        "duration": 4,
+        "error": null,
+        "title": "should show redirect error message when checkout fails",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Error Messages"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Random Input Fuzzing should handle random product data without crashing",
+        "status": "failed",
+        "duration": 3,
+        "error": "{\n  \"messages\": [\n    \"TypeError: _react2.screen.unmount is not a function\\n    at Object.unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:70:18)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 3,\n  \"fullName\": \"Product Component - Fuzz Tests Random Input Fuzzing should handle random product data without crashing\",\n  \"title\": \"should handle random product data without crashing\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Random Input Fuzzing\"\n  ]\n}",
+        "title": "should handle random product data without crashing",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Random Input Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Random Input Fuzzing should handle extreme string lengths",
+        "status": "failed",
+        "duration": 1,
+        "error": "{\n  \"messages\": [\n    \"TypeError: _react2.screen.unmount is not a function\\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:95:18)\\n    at Array.forEach (<anonymous>)\\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:82:22)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1,\n  \"fullName\": \"Product Component - Fuzz Tests Random Input Fuzzing should handle extreme string lengths\",\n  \"title\": \"should handle extreme string lengths\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Random Input Fuzzing\"\n  ]\n}",
+        "title": "should handle extreme string lengths",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Random Input Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Random Input Fuzzing should handle special characters in product data",
+        "status": "failed",
+        "duration": 1,
+        "error": "{\n  \"messages\": [\n    \"TypeError: _react2.screen.unmount is not a function\\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:130:18)\\n    at Array.forEach (<anonymous>)\\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:117:20)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1,\n  \"fullName\": \"Product Component - Fuzz Tests Random Input Fuzzing should handle special characters in product data\",\n  \"title\": \"should handle special characters in product data\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Random Input Fuzzing\"\n  ]\n}",
+        "title": "should handle special characters in product data",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Random Input Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Numeric Input Fuzzing should handle extreme numeric values",
+        "status": "failed",
+        "duration": 1,
+        "error": "{\n  \"messages\": [\n    \"TypeError: _react2.screen.unmount is not a function\\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:168:18)\\n    at Array.forEach (<anonymous>)\\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:155:21)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1,\n  \"fullName\": \"Product Component - Fuzz Tests Numeric Input Fuzzing should handle extreme numeric values\",\n  \"title\": \"should handle extreme numeric values\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Numeric Input Fuzzing\"\n  ]\n}",
+        "title": "should handle extreme numeric values",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Numeric Input Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Numeric Input Fuzzing should handle random numeric inputs",
+        "status": "failed",
+        "duration": 0,
+        "error": "{\n  \"messages\": [\n    \"TypeError: _react2.screen.unmount is not a function\\n    at Object.unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:192:18)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 0,\n  \"fullName\": \"Product Component - Fuzz Tests Numeric Input Fuzzing should handle random numeric inputs\",\n  \"title\": \"should handle random numeric inputs\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Numeric Input Fuzzing\"\n  ]\n}",
+        "title": "should handle random numeric inputs",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Numeric Input Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Object Structure Fuzzing should handle missing properties",
+        "status": "failed",
+        "duration": 1,
+        "error": "{\n  \"messages\": [\n    \"TypeError: _react2.screen.unmount is not a function\\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:217:18)\\n    at Array.forEach (<anonymous>)\\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:213:20)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1,\n  \"fullName\": \"Product Component - Fuzz Tests Object Structure Fuzzing should handle missing properties\",\n  \"title\": \"should handle missing properties\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Object Structure Fuzzing\"\n  ]\n}",
+        "title": "should handle missing properties",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Object Structure Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Object Structure Fuzzing should handle extra properties",
+        "status": "failed",
+        "duration": 1,
+        "error": "{\n  \"messages\": [\n    \"TypeError: _react2.screen.unmount is not a function\\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:238:18)\\n    at Array.forEach (<anonymous>)\\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:234:18)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 1,\n  \"fullName\": \"Product Component - Fuzz Tests Object Structure Fuzzing should handle extra properties\",\n  \"title\": \"should handle extra properties\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Object Structure Fuzzing\"\n  ]\n}",
+        "title": "should handle extra properties",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Object Structure Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Object Structure Fuzzing should handle null and undefined values",
+        "status": "failed",
+        "duration": 9,
+        "error": "{\n  \"messages\": [\n    \"TypeError: Cannot destructure property 'name' of 'product' as it is null.\\n    at name (/Users/jlaplante/workspace/ecommerce-with-stripe/components/Product.js:7:11)\\n    at renderWithHooks (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:16305:18)\\n    at mountIndeterminateComponent (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:20074:13)\\n    at beginWork (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:21587:16)\\n    at beginWork$1 (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:27426:14)\\n    at performUnitOfWork (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:26560:12)\\n    at workLoopSync (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:26466:5)\\n    at renderRootSync (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:26434:7)\\n    at recoverFromConcurrentError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:25850:20)\\n    at performConcurrentWorkOnRoot (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:25750:22)\\n    at flushActQueue (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react/cjs/react.development.js:2667:24)\\n    at act (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react/cjs/react.development.js:2582:11)\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/dist/act-compat.js:47:25\\n    at renderRoot (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/dist/pure.js:180:26)\\n    at render (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/dist/pure.js:271:10)\\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:260:17\\n    at Array.forEach (<anonymous>)\\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:258:27)\\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\\n    at new Promise (<anonymous>)\\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)\"\n  ],\n  \"details\": [\n    {}\n  ],\n  \"location\": \"Unknown location\",\n  \"duration\": 9,\n  \"fullName\": \"Product Component - Fuzz Tests Object Structure Fuzzing should handle null and undefined values\",\n  \"title\": \"should handle null and undefined values\",\n  \"ancestorTitles\": [\n    \"Product Component - Fuzz Tests\",\n    \"Object Structure Fuzzing\"\n  ]\n}",
+        "title": "should handle null and undefined values",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Object Structure Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Event Fuzzing should handle rapid random button clicks",
+        "status": "passed",
+        "duration": 103,
+        "error": null,
+        "title": "should handle rapid random button clicks",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Event Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Fuzz Tests Event Fuzzing should handle concurrent button clicks",
+        "status": "passed",
+        "duration": 19,
+        "error": null,
+        "title": "should handle concurrent button clicks",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Event Fuzzing"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Weak Assertion Detection should detect weak assertion - only checking if element exists",
+        "status": "passed",
+        "duration": 3,
+        "error": null,
+        "title": "should detect weak assertion - only checking if element exists",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Weak Assertion Detection"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Weak Assertion Detection should detect weak assertion - not checking actual text content",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should detect weak assertion - not checking actual text content",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Weak Assertion Detection"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Weak Assertion Detection should detect weak assertion - not checking quantity value",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should detect weak assertion - not checking quantity value",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Weak Assertion Detection"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests State Mutation Tests should detect state mutation - quantity should be immutable from external changes",
+        "status": "passed",
+        "duration": 2,
+        "error": null,
+        "title": "should detect state mutation - quantity should be immutable from external changes",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "State Mutation Tests"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests State Mutation Tests should detect state mutation - product props should not be modified",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should detect state mutation - product props should not be modified",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "State Mutation Tests"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Event Handler Mutation Tests should detect event handler mutation - addItem should be called with exact parameters",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should detect event handler mutation - addItem should be called with exact parameters",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Event Handler Mutation Tests"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Event Handler Mutation Tests should detect event handler mutation - quantity should reset after add to cart",
+        "status": "passed",
+        "duration": 2,
+        "error": null,
+        "title": "should detect event handler mutation - quantity should reset after add to cart",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Event Handler Mutation Tests"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Component Structure Mutation Tests should detect structure mutation - required elements should always be present",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should detect structure mutation - required elements should always be present",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Component Structure Mutation Tests"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Component Structure Mutation Tests should detect CSS class mutation - component should maintain consistent styling",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should detect CSS class mutation - component should maintain consistent styling",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Component Structure Mutation Tests"
+        ]
+      },
+      {
+        "name": "Product Component - Mutation Tests Data Integrity Mutation Tests should detect data integrity issues - price formatting should be consistent",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should detect data integrity issues - price formatting should be consistent",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Mutation Tests",
+          "Data Integrity Mutation Tests"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Invalid Product Data should handle product with missing name",
+        "status": "passed",
+        "duration": 3,
+        "error": null,
+        "title": "should handle product with missing name",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Invalid Product Data"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Invalid Product Data should handle product with missing price",
+        "status": "passed",
+        "duration": 2,
+        "error": null,
+        "title": "should handle product with missing price",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Invalid Product Data"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Invalid Product Data should handle product with missing emoji",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should handle product with missing emoji",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Invalid Product Data"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Invalid Product Data should handle product with null values",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should handle product with null values",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Invalid Product Data"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Invalid Product Data should handle product with undefined values",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should handle product with undefined values",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Invalid Product Data"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Extreme Price Values should handle zero price",
+        "status": "passed",
+        "duration": 0,
+        "error": null,
+        "title": "should handle zero price",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Extreme Price Values"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Extreme Price Values should handle very large price",
+        "status": "passed",
+        "duration": 0,
+        "error": null,
+        "title": "should handle very large price",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Extreme Price Values"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Extreme Price Values should handle negative price",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should handle negative price",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Extreme Price Values"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Extreme Price Values should handle decimal price",
+        "status": "passed",
+        "duration": 1,
+        "error": null,
+        "title": "should handle decimal price",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Extreme Price Values"
+        ]
+      },
+      {
+        "name": "Product Component - Edge Cases Extreme Quantity Values should handle rapid quantity increases",
+        "status": "passed",
+        "duration": 4,
+        "error": null,
+        "title": "should handle rapid quantity increases",
+        "location": "Unknown location",
+        "ancestorTitles": [
+          "Product Component - Edge Cases",
+          "Extreme Quantity Values"
+        ]
+      }
+    ],
+    "errors": [
+      {
+        "messages": [
+          "Error: Unable to find an element with the text: Proceed to checkout. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div>\u001b[39m\n    \u001b[36m<article\u001b[39m\n      \u001b[33mclass\u001b[39m=\u001b[32m\"mt-3 flex flex-col\"\u001b[39m\n    \u001b[36m>\u001b[39m\n      \u001b[36m<div\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"text-red-700 text-xs mb-3 h-5 text-center\"\u001b[39m\n      \u001b[36m/>\u001b[39m\n      \u001b[36m<button\u001b[39m\n        \u001b[33mclass\u001b[39m=\u001b[32m\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\"\u001b[39m\n      \u001b[36m>\u001b[39m\n        \u001b[0mLoading...\u001b[0m\n      \u001b[36m</button>\u001b[39m\n    \u001b[36m</article>\u001b[39m\n  \u001b[36m</div>\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at waitForWrapper (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/wait-for.js:163:27)\n    at Object.<anonymous> (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/unit/CheckoutButton.test.js:51:20)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {
+            "name": "TestingLibraryElementError"
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 1010,
+        "fullName": "CheckoutButton Component - Unit Tests Button State Management should return to \"Proceed to checkout\" text after loading completes",
+        "title": "should return to \"Proceed to checkout\" text after loading completes",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Button State Management"
+        ]
+      },
+      {
+        "messages": [
+          "Error: expect(element).toBeDisabled()\n\nReceived element is not disabled:\n  <button class=\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\" />\n    at Object.toBeDisabled (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/unit/CheckoutButton.test.js:65:22)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {
+            "matcherResult": {
+              "pass": false,
+              "message": "expect(element).toBeDisabled()\n\nReceived element is not disabled:\n  <button class=\"bg-emerald-50 hover:bg-emerald-500 hover:text-white transition-colors duration-500 text-emerald-500 py-3 px-5 rounded-md w-100 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:text-white\" />"
+            }
+          }
+        ],
+        "location": "Unknown location",
+        "duration": 2,
+        "fullName": "CheckoutButton Component - Unit Tests Cart Validation should disable button when cart is empty",
+        "title": "should disable button when cart is empty",
+        "ancestorTitles": [
+          "CheckoutButton Component - Unit Tests",
+          "Cart Validation"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: _react2.screen.unmount is not a function\n    at Object.unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:70:18)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 3,
+        "fullName": "Product Component - Fuzz Tests Random Input Fuzzing should handle random product data without crashing",
+        "title": "should handle random product data without crashing",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Random Input Fuzzing"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: _react2.screen.unmount is not a function\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:95:18)\n    at Array.forEach (<anonymous>)\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:82:22)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 1,
+        "fullName": "Product Component - Fuzz Tests Random Input Fuzzing should handle extreme string lengths",
+        "title": "should handle extreme string lengths",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Random Input Fuzzing"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: _react2.screen.unmount is not a function\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:130:18)\n    at Array.forEach (<anonymous>)\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:117:20)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 1,
+        "fullName": "Product Component - Fuzz Tests Random Input Fuzzing should handle special characters in product data",
+        "title": "should handle special characters in product data",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Random Input Fuzzing"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: _react2.screen.unmount is not a function\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:168:18)\n    at Array.forEach (<anonymous>)\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:155:21)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 1,
+        "fullName": "Product Component - Fuzz Tests Numeric Input Fuzzing should handle extreme numeric values",
+        "title": "should handle extreme numeric values",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Numeric Input Fuzzing"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: _react2.screen.unmount is not a function\n    at Object.unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:192:18)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 0,
+        "fullName": "Product Component - Fuzz Tests Numeric Input Fuzzing should handle random numeric inputs",
+        "title": "should handle random numeric inputs",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Numeric Input Fuzzing"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: _react2.screen.unmount is not a function\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:217:18)\n    at Array.forEach (<anonymous>)\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:213:20)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 1,
+        "fullName": "Product Component - Fuzz Tests Object Structure Fuzzing should handle missing properties",
+        "title": "should handle missing properties",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Object Structure Fuzzing"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: _react2.screen.unmount is not a function\n    at unmount (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:238:18)\n    at Array.forEach (<anonymous>)\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:234:18)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 1,
+        "fullName": "Product Component - Fuzz Tests Object Structure Fuzzing should handle extra properties",
+        "title": "should handle extra properties",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Object Structure Fuzzing"
+        ]
+      },
+      {
+        "messages": [
+          "TypeError: Cannot destructure property 'name' of 'product' as it is null.\n    at name (/Users/jlaplante/workspace/ecommerce-with-stripe/components/Product.js:7:11)\n    at renderWithHooks (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:16305:18)\n    at mountIndeterminateComponent (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:20074:13)\n    at beginWork (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:21587:16)\n    at beginWork$1 (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:27426:14)\n    at performUnitOfWork (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:26560:12)\n    at workLoopSync (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:26466:5)\n    at renderRootSync (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:26434:7)\n    at recoverFromConcurrentError (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:25850:20)\n    at performConcurrentWorkOnRoot (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react-dom/cjs/react-dom.development.js:25750:22)\n    at flushActQueue (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react/cjs/react.development.js:2667:24)\n    at act (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/react/cjs/react.development.js:2582:11)\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/dist/act-compat.js:47:25\n    at renderRoot (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/dist/pure.js:180:26)\n    at render (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/@testing-library/react/dist/pure.js:271:10)\n    at /Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:260:17\n    at Array.forEach (<anonymous>)\n    at Object.forEach (/Users/jlaplante/workspace/ecommerce-with-stripe/tests/fuzz/Product.test.js:258:27)\n    at Promise.then.completed (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:298:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/utils.js:231:10)\n    at _callCircusTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:316:40)\n    at _runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:252:3)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:126:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at _runTestsForDescribeBlock (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:121:9)\n    at run (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/run.js:71:3)\n    at runAndTransformResultsToJestFormat (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)\n    at jestAdapter (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)\n    at runTestInternal (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:367:16)\n    at runTest (/Users/jlaplante/workspace/ecommerce-with-stripe/node_modules/jest-runner/build/runTest.js:444:34)"
+        ],
+        "details": [
+          {}
+        ],
+        "location": "Unknown location",
+        "duration": 9,
+        "fullName": "Product Component - Fuzz Tests Object Structure Fuzzing should handle null and undefined values",
+        "title": "should handle null and undefined values",
+        "ancestorTitles": [
+          "Product Component - Fuzz Tests",
+          "Object Structure Fuzzing"
+        ]
+      }
+    ]
+  },
+  "edge_cases": {
+    "passed": 0,
+    "failed": 0,
+    "tests": [],
+    "errors": []
+  },
+  "property_based": {
+    "passed": 0,
+    "failed": 0,
+    "tests": [],
+    "errors": []
+  },
+  "fuzz": {
+    "passed": 0,
+    "failed": 0,
+    "tests": [],
+    "errors": []
+  },
+  "mutation": {
+    "passed": 0,
+    "failed": 0,
+    "tests": [],
+    "errors": []
+  }
+}

@@ -48,7 +48,8 @@ export default async function handler(req, res) {
         testPattern = 'tests/integration';
         break;
       default:
-        testPattern = 'tests';
+        // For "all" tests, use a more comprehensive pattern to find all test files
+        testPattern = 'tests/**/*.test.js';
     }
 
     sendLog(`Running tests with pattern: ${testPattern}`);
@@ -134,8 +135,8 @@ export default async function handler(req, res) {
     
     sendLog(`Processing ${jestOutput.testResults.length} test suites`);
     
-    // Limit to first 5 test suites to avoid long processing
-    const maxTestSuites = 5;
+    // Limit to first 10 test suites to process more categories (increased from 5)
+    const maxTestSuites = 10;
     const testSuitesToProcess = jestOutput.testResults.slice(0, maxTestSuites);
     
     if (jestOutput.testResults.length > maxTestSuites) {
