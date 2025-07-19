@@ -124,8 +124,8 @@ if __name__ == "__main__":
     print("\n\n=== REPORT ANALYSIS ===\n")
     print(analysis)
 
-    with open(test_path, "r") as file:
-        code_content = file.read()
-    rewrite = rewrite_tests(report_output, analysis, code_content)
-    print("\n\n=== REWRITE TESTS ===\n")
-    print(rewrite)
+    # with open(test_path, "r") as file:
+    #     code_content = file.read()
+    # rewrite = rewrite_tests(report_output, analysis, code_content)
+    # print("\n\n=== REWRITE TESTS ===\n")
+    # print(rewrite)
