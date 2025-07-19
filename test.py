@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(
     format="[%(asctime)s][%(levelname)s] %(name)s: %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    level=logging.DEBUG,
+    level=logging.INFO,
 )
 
 PROMPT = """
@@ -38,6 +38,9 @@ on the test report.
 Write the test report in a way that is easy to understand and follow.
 Also provide an analysis of the test report, including any potential issues
 that may arise and how to address them. Tackle the coverage issues, if any.
+
+Do not provide any side comments or conversational input, just focus on the analysis
+and feedback.
 """
 
 
@@ -107,7 +110,7 @@ def analyze_tests(test_report: str) -> str:
         raise ValueError("API_KEY environment variable is not set")
     client = CodeGenerator(api_key=key, setup_prompt=PROMPT)
     message = f"Analyze the following test report:\n\n{test_report}"
-    logger.info("Sending analysis request to LLM...")
+    logger.info("Sending analysis request to LLM")
     response = client.request(message)
     return response
 
@@ -118,14 +121,23 @@ def rewrite_tests(report_output: str, analysis: str, test_code: str) -> str:
         raise ValueError("API_KEY environment variable is not set")
     client = CodeGenerator(api_key=key, setup_prompt=REWRITE_PROMPT)
     message = f"""
-    Here is the test report:\n\n{report_output}
+    Here is the detailed test execution report:
 
-    And here is the analysis of the test report:\n\n{analysis}
+    ```
+    {report_output}
+    ```
+
+    And here is the analysis of the test report:
+
+    ```
+    {analysis}
+    ```
 
     Based on this analysis, rewrite the following test code. Ensure the tests are
     written in a way that is easy to understand and maintain.
 
     Code to rewrite:
+
     ```python
     {test_code}
     ```
