@@ -1,0 +1,11 @@
+Stripe Payment Integration
+Implement and validate handling of Stripe payment flows including:
+Successful payment authorization with JPY as the currency
+Failed payment attempts and error codes from Stripe API
+3D Secure (3DS) authentication challenge and resolution flows
+Ensure error responses from Stripe are captured and surfaced in the UI with appropriate user feedback
+Verify successful transactions are logged and retrievable via Stripe Dashboard API or web interface
+Shopping Cart System
+Enable CRUD operations on cart items via front-end: add, remove, and update item quantities
+Implement real-time cart total calculation and UI updates on quantity or item changes without page reload
+Ensure cart state is synced with any back-end or API if applicable before proceeding to payment
