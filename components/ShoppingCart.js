@@ -1,3 +1,4 @@
+import React from 'react';
 import { useShoppingCart } from "use-shopping-cart";
 import CartItem from "./CartItem";
 import CheckoutButton from "./CheckoutButton";

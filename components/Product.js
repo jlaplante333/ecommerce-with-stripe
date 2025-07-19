@@ -1,6 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart";
-
 
 export default function Product({ product }) {
   const { addItem } = useShoppingCart();

@@ -1,15 +1,21 @@
+import React from 'react';
 import Layout from "@/components/Layout";
 import "@/styles/globals.css";
 import { CartProvider } from "use-shopping-cart";
 import { useState } from 'react';
 import QAIntro from "@/components/PrdAndSequence";
+import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }) {
   const [showQAIntro, setShowQAIntro] = useState(true);
+  const router = useRouter();
 
   const handleProceed = () => {
     setShowQAIntro(false);
   };
+
+  // Skip QA intro for test-runner page
+  const shouldShowIntro = showQAIntro && router.pathname !== '/test-runner';
 
   return (
     <CartProvider
@@ -23,7 +29,7 @@ export default function App({ Component, pageProps }) {
       shouldPersist={true}
     >
       <Layout>
-        {showQAIntro ? (
+        {shouldShowIntro ? (
           <QAIntro onProceed={handleProceed} />
         ) : (
           <Component {...pageProps} />
