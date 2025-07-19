@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  test-reporting:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +31,6 @@ jobs:
           pip install poetry
           poetry install --with dev
 
-      - name: Install dependencies
+      - name: Run tests
         run: |
           poetry run python test.py
